@@ -39,5 +39,11 @@ public class Main {
         myFirstRectangle.setHeightandWidth(newHeight, newWidth);
         System.out.println("Height: "+ myFirstRectangle.getHeight() + " width: " + myFirstRectangle.getWidth());
 
+        System.out.println("------------------------");
+
+        //account
+        Account account = new Account(100, "Santa Claus");
+        System.out.println(account);
+
     }
 }
