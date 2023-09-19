@@ -19,9 +19,9 @@ public class Account {
 
     public double withdraw(double withDrawThisMuch) {
 
-        if (this.balance >= withDrawThisMuch && withDrawThisMuch >0){
-            double newBalance = this.balance - withDrawThisMuch;
-            return newBalance;
+        if (this.balance >= withDrawThisMuch && withDrawThisMuch > 0){
+            this.balance -= withDrawThisMuch;
+            return withDrawThisMuch;
         }
 
         return 0;

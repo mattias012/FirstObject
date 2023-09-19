@@ -10,6 +10,8 @@
         en instansmetod setXY som låter dig sätta instansvariablerna x och y
         två instansmetoder setWidth och setHeight som låter dig sätta motsvarande instansvariabler */
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -43,8 +45,24 @@ public class Main {
 
         //account
         Account account = new Account(100, "Santa Claus");
+        Account account2 = new Account(1400, "Elf");
+
         System.out.println(account.getCount());
-        System.out.println(account);
+
+        ArrayList<Account> accounts = new ArrayList<>();
+        accounts.add(account);
+        accounts.add(account2);
+
+        for (Account acc : accounts){
+
+            acc.withdraw(19.0);
+        }
+
+        for (Account acc : accounts){
+            System.out.println(acc);
+        }
+
+
 
     }
 }
