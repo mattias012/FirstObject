@@ -43,6 +43,7 @@ public class Main {
 
         //account
         Account account = new Account(100, "Santa Claus");
+        System.out.println(account.getCount());
         System.out.println(account);
 
     }

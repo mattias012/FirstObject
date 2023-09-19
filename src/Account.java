@@ -1,21 +1,30 @@
 public class Account {
 
-    double balance;
-    String name;
+    private double balance;
+    private String name;
+
+    private static int count = 0;
 
     public Account() {
         this.balance = 0;
         this.name = "No One";
+        count++;
     }
 
     public Account(double balance, String name) {
         this.balance = balance;
         this.name = name;
+        count++;
     }
 
     public double withdraw(double withDrawThisMuch) {
-        double newBalance = this.balance - withDrawThisMuch;
-        return newBalance;
+
+        if (this.balance >= withDrawThisMuch && withDrawThisMuch >0){
+            double newBalance = this.balance - withDrawThisMuch;
+            return newBalance;
+        }
+
+        return 0;
     }
     public double deposit(double depositThisMuch){
 
@@ -43,4 +52,7 @@ public class Account {
         return name + " ditt saldo är " + balance + " SEK";
     }
 
+    public static int getCount() {
+        return count;
+    }
 }
